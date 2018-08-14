@@ -1,4 +1,5 @@
 from django import template
+from django.apps import apps
 from django.conf import settings
 from django.db import models
 from django.contrib.sites.models import Site
@@ -7,7 +8,7 @@ from django.template import Context, loader
 
 
 register = template.Library()
-Analytics = models.get_model('google_analytics', 'analytics')
+Analytics = apps.get_model('google_analytics', 'analytics')
 
 def do_get_analytics(parser, token):
     contents = token.split_contents()
