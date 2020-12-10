@@ -1,0 +1,4 @@
+include *.mdown
+include AUTHORS
+recursive-include google_analytics *.json
+recursive-include google_analytics *.py
